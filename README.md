@@ -1,7 +1,7 @@
 # Level - 2 @Oasis Infobyte
 ## Task - 03: To Do List
 #### Code Editor used: Visual Studio Code
-#### Tech Stack Used: HTML, CSS
+#### Tech Stack Used: HTML, CSS, Javascript
 
 ## Screenshort:
 
