@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: rgba(0, 0, 0, 0.4) url('https://source.unsplash.com/1600x900/?trees');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000000;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #767576;
+}
+
+.parent {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Main container */
+.container {
+  position: absolute;
+  background-color: #ffffff;
+  width: 40%;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  padding-top: 40px;
+  max-height: 73vh;
+  box-shadow: 0px 5px 5px 0px rgba(55, 55, 55, 0.999);
+}
+
+/* Heading */
+h1 {
+  color: #4e4d4d;
+  text-align: center;
+  font-family: sans-serif;
+  margin-bottom: 35px;
+  font-weight: bold;
+}
+
+/* Task bar */
+#newtask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 20px;
+}
+
+#newtask input {
+  width: 75%;
+  height: 45px;
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #767576;
+  padding: 12px;
+  color: #000000;
+  font-weight: bold;
+  position: relative;
+  caret-color: #767576;
+}
+
+#newtask input:focus {
+  outline: none;
+  border-bottom: 1px solid #767576;
+}
+
+/* Add button */
+#newtask button {
+  position: relative;
+  float: right;
+  width: 18%;
+  height: 45px;
+  border-radius: 22px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  background-color: #0eff00ab;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  outline: none;
+}
+
+/* Search */
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#search {
+  background-color: #767576;
+  padding: 6.5px;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  margin-bottom: 30px;
+  margin-left: 13px;
+  border-radius: 35px;
+}
+
+.search>input {
+  background-color: rgba(4, 3, 14, 0.2);
+  border: 0px solid #000000;
+  border-radius: 6px;
+  width: 70%;
+  outline: none;
+  padding: 12px;
+  position: relative;
+  caret-color: rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.search>input:focus {
+  outline: none;
+  border-bottom: 2px solid #000000;
+}
+
+/*result*/
+#tasks {
+  background-color: rgb(55 55 55 / 100%);
+  padding: 30px 20px;
+  border-radius: 10px;
+  width: 100%;
+  overflow-y: scroll;
+  max-height: 40vh;
+}
+
+.task {
+  background: #4e4d4d;
+  border-radius: 16px;
+  height: 50px;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  color: rgb(255, 255, 255);
+}
+
+.task span {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.task button {
+  background-color: #b32222;
+  color: #ffffff;
+  height: 100%;
+  width: 40px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+.filtred {
+  display: none;
+}
+
+/* preloader */
+.preloader {
+  height: 100vh;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader span {
+  color: #4e4d4d;
+  font-size: 50px;
+  animation: animate alternate-reverse infinite 0.6s;
+  transition: ease-in 0.6s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+
+  25% {
+    opacity: 0.5;
+    scale: 1;
+  }
+}
+
+.gone {
+  animation: none;
+  opacity: 0;
+  transform: scale(10);
+  transition: ease-in 0.6s;
+}
+
+/* breakpoints */
+@media screen and (max-width: 900px) {
+  .container {
+    width: 96%;
+  }
+}
